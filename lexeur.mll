@@ -7,6 +7,7 @@ exception TokenInconu
 rule token = parse
 [' ' '\t'] { token lexbuf }
 | ['\n'] { EOL }
+| [';'] { PT_VIRG }
 | ['0'-'9']+ { NOMBRE }
 | '+' { PLUS }
 | '-' { MOINS }
